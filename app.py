@@ -6,5 +6,7 @@ st.sidebar.title("Parámetros")
 st.write("Elaborado por: Juan Játiva")
 
 archivo = st.file_uploader("Cargue su archivo")
-tabla = pd.read_csv(archivo)
-st.write(tabla)
+if archivo is not None:
+  tabla = pd.read_csv(archivo)
+  st.write(tabla)
+
